@@ -1,0 +1,134 @@
+/* App.css */
+
+/* Basic resets */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-image: url("./weather.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Container for the app */
+.app {
+  background-color: #ffffff;
+  margin-top: -180px;
+  /* height: 150px; */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  width: 100%;
+  width: 600px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Adding hover effect on the container */
+.app:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* Search box */
+.search-box {
+  margin-bottom: 20px;
+  /* margin-right: 20px; */
+}
+
+.search-input {
+  width: 70%;
+  padding: 10px;
+  border: 2px solid #00aaff;
+  border-radius: 20px;
+  font-size: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  outline: none;
+  transition: box-shadow 0.3s ease;
+}
+
+.search-input:focus {
+  box-shadow: 0 6px 20px rgba(0, 170, 255, 0.6);
+}
+
+.search-button {
+  margin-left: 20px;
+  padding: 10px 20px;
+  background-color: #00aaff;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.search-button:hover {
+  background-color: #008ecc;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Loading and Error messages */
+.loading, .error {
+  color: #ff3333;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(255, 0, 0, 0.5);
+  animation: textGlow 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes textGlow {
+  0% {
+    text-shadow: 1px 1px 3px rgba(255, 0, 0, 0.5);
+  }
+  100% {
+    text-shadow: 1px 1px 8px rgba(255, 0, 0, 1);
+  }
+}
+
+/* Weather information box */
+.weather-info {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.weather-info:hover {
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* City name and temperature */
+.city-name {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.temperature {
+  font-size: 30px;
+  font-weight: bold;
+  color: #00aaff;
+  text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.5);
+  transition: text-shadow 0.3s ease;
+}
+
+.temperature:hover {
+  text-shadow: 4px 4px 10px rgba(0, 170, 255, 1);
+}
+
+/* Weather description */
+.description {
+  font-size: 18px;
+  color: #666;
+}
